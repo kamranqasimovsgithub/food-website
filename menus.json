@@ -1,0 +1,36 @@
+
+
+{
+    "menus": [
+        {
+            "name": "Caesar Salad",
+            "category": "salad",
+            "price": 12,
+            "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
+        },
+        {
+            "name": "Greek Salad",
+            "category": "salad",
+            "price": 10,
+            "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe"
+        },
+        {
+            "name": "Grilled Chicken",
+            "category": "lorem",
+            "price": 18,
+            "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187"
+        },
+        {
+            "name": "Chocolate Cake",
+            "category": "ipsum",
+            "price": 8,
+            "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+        },
+        {
+            "name": "Fresh Lemonade",
+            "category": "dolor",
+            "price": 5,
+            "image": "https://images.unsplash.com/photo-1514326640560-7d063ef2aed5"
+        }
+    ]
+}

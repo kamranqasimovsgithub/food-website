@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/home.css">
+    <link rel="stylesheet" href="assets/cart.css">
+    <link rel="stylesheet" href="assets/app.css">
+    <!-- <link rel="stylesheet" href="assets/menu-slider.css"> -->
+    <style>
+      
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="menu-wrap">
+            <div class="logo">Food</div>
+            <div class="menu">
+                <a href="index.html"><div class="nav-menu-item active">Home</div></a>
+                <a href="about.html"><div class="nav-menu-item">About</div></a>
+                <a href="menu.html"><div class="nav-menu-item">Menu</div></a>
+                <a href="reviews.html"><div class="nav-menu-item">Reviews</div></a>
+                <a href="contact.html"><div class="nav-menu-item">Contact</div></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="menu-search" placeholder="Search menus...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mb-nav">
+        <div class="mb-move-item"></div>
+        <div class="mb-nav-item active">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="about.html"><i class="fas fa-info-circle"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="menu.html"><i class="fas fa-utensils"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="reviews.html"><i class="fas fa-star"></i></a>
+        </div>
+    </div>
+
+    <!-- Cart Popup -->
+    <div class="cart-popup">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <i class="fas fa-times close-cart"></i>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total:</h3>
+            <span>$0.00</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="fullheight align-items-center bg-img bg-img-fixed" style="background-image: url(https://images.unsplash.com/photo-1540189549336-e6e99c3679fe); background-position: left;">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-xs-12">
+                    <div class="slogan left-to-right start">
+                        <h1>Food Order</h1>
+                        <p>Discover the taste of perfection with our curated dishes.</p>
+                        <button onclick="window.location.href='menu.html'">Explore Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2>Explore Our Categories</h2>
+            <div class="categories-slider">
+                <div class="category-item" data-filter="salad">
+                    <a href="menu.html?filter=salad">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" alt="Salads">
+                        <h3>Salads</h3>
+                    </a>
+                </div>
+                <div class="category-item" data-filter="lorem">
+                    <a href="menu.html?filter=lorem">
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187" alt="Main Course">
+                        <h3>Main Course</h3>
+                    </a>
+                </div>
+                <div class="category-item" data-filter="ipsum">
+                    <a href="menu.html?filter=ipsum">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Desserts">
+                        <h3>Desserts</h3>
+                    </a>
+                </div>
+                <div class="category-item" data-filter="dolor">
+                    <a href="menu.html?filter=dolor">
+                        <img src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5" alt="Drinks">
+                        <h3>Drinks</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menus Section -->
+    <section class="menus-section">
+        <div class="container">
+            <h2>Our Featured Menus</h2>
+            <div class="menus-slider">
+                <!-- Menu items will be dynamically loaded here -->
+            </div>
+            <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Download App Section -->
+    <section class="download-app">
+        <div class="container">
+            <div class="app-content">
+                <h2>Get Our Mobile App</h2>
+                <p>Order your favorite meals on the go with our user-friendly mobile app, available for both iOS and Android.</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-button"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="#" class="app-button"><i class="fab fa-google-play"></i> Google Play</a>
+                </div>
+            </div>
+            <div class="app-image">
+                <img src="https://images.unsplash.com/photo-1551721434-8b94ddff0e6d?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mobile App">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What are your delivery hours?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We offer delivery from 11:00 AM to 10:00 PM, seven days a week.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Do you cater to dietary restrictions?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes, we offer a variety of vegetarian, vegan, and gluten-free options. Please check our menu for details or contact us for specific requests.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        How can I track my order?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Once your order is confirmed, you'll receive a tracking link via email or SMS to monitor its status in real-time.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What payment methods do you accept?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We accept all major credit cards, debit cards, Apple Pay, Google Pay, and cash on delivery.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Can I schedule an order in advance?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes, you can schedule orders up to 7 days in advance through our website or mobile app.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-column">
+                <h3>Food</h3>
+                <p>Experience the joy of fine dining with our curated menu and exceptional service.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="slider.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Food, ABC City</li>
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@food.com</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe for the latest updates and offers.</p>
+                <div class="input-group">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Food. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Accordion functionality
+            $('.accordion-header').click(function() {
+                $(this).toggleClass('active');
+                $(this).next('.accordion-content').slideToggle();
+                $(this).parent().toggleClass('active');
+                $('.accordion-item').not($(this).parent()).removeClass('active');
+                $('.accordion-item').not($(this).parent()).find('.accordion-header').removeClass('active');
+                $('.accordion-item').not($(this).parent()).find('.accordion-content').slideUp();
+            });
+
+            // Fetch menu data for search
+            $.getJSON('menus.json', function(data) {
+                $('#menu-search').on('input', function() {
+                    const query = $(this).val().toLowerCase();
+                    if (query.length > 0) {
+                        const results = data.menus.filter(menu => 
+                            menu.name.toLowerCase().includes(query) || 
+                            menu.category.toLowerCase().includes(query)
+                        );
+                        if (results.length > 0) {
+                            window.location.href = `menu.html?search=${encodeURIComponent(query)}`;
+                        }
+                    }
+                });
+
+                // console.log(data);
+
+
+                // Populate menus slider
+                const menusContainer = $('.menus-slider');
+                data.menus.forEach(menu => {
+                    const menuItem = `
+                        <div class="menu-item">
+                            <a href="menu.html?filter=${menu.category}">
+                                <div class="menu-img">
+                                    <img src="${menu.image}" alt="${menu.name}">
+                                </div>
+                                <div class="menu-info">
+                                    <h3>${menu.name}</h3>
+                                    <span>$${menu.price}</span>
+                                </div>
+                            </a>
+                        </div>
+                    `;
+                    menusContainer.append(menuItem);
+                });
+
+
+                // Review Slider
+                $('.menus-slider').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    prevArrow: '<i class="fas fa-chevron-left slick-prev"></i>',
+                    nextArrow: '<i class="fas fa-chevron-right slick-next"></i>',
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 2
+                            }
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 1,
+                                arrows: false
+                            }
+                        }
+                    ]
+                });
+                            // Review Slider
+                $('.categories-slider').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    prevArrow: '<i class="fas fa-chevron-left slick-prev"></i>',
+                    nextArrow: '<i class="fas fa-chevron-right slick-next"></i>',
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 2
+                            }
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 1,
+                                arrows: false
+                            }
+                        }
+                    ]
+                });
+            });
+        
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

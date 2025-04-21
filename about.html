@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Haven - About</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- <link rel="stylesheet" href="assets/home.css"> -->
+    <link rel="stylesheet" href="assets/about.css">
+
+    <link rel="stylesheet" href="assets/cart.css">
+    <!-- <link rel="stylesheet" href="assets/app.css"> -->
+</head>
+<body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="menu-wrap">
+            <div class="logo">Food</div>
+            <div class="menu">
+                <a href="index.html"><div class="nav-menu-item ">Home</div></a>
+                <a href="about.html"><div class="nav-menu-item active">About</div></a>
+                <a href="menu.html"><div class="nav-menu-item">Menu</div></a>
+                <a href="reviews.html"><div class="nav-menu-item">Reviews</div></a>
+                <a href="contact.html"><div class="nav-menu-item">Contact</div></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="menu-search" placeholder="Search menus...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mb-nav">
+        <div class="mb-move-item"></div>
+        <div class="mb-nav-item">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+        </div>
+        <div class="mb-nav-item active">
+            <a href="about.html"><i class="fas fa-info-circle"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="menu.html"><i class="fas fa-utensils"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="reviews.html"><i class="fas fa-star"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="contact.html"><i class="fas fa-phone"></i></a>
+        </div>
+    </div>
+
+    <!-- Cart Popup -->
+    <div class="cart-popup">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <i class="fas fa-times close-cart"></i>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total:</h3>
+            <span>$0.00</span>
+        </div>
+    </div>
+
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <!-- Existing About Intro -->
+        <div class="row align-items-center about-intro">
+            <div class="col-6 col-xs-12">
+                <div class="about-slogan zoom start">
+                    <h3>Welcome to <span class="primary-color">Food</span></h3>
+                    <p>We bring you the finest culinary experiences with fresh ingredients and love.</p>
+                </div>
+            </div>
+            <div class="col-6 col-xs-12">
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba" alt="About Food" class="fullwidth right-to-left start">
+            </div>
+        </div>
+    
+        <!-- Mission and Vision -->
+        <div class="mission-vision">
+            <div class="mission">
+                <i class="fas fa-utensils fa-2x"></i>
+                <h3>Our Mission</h3>
+                <p>To deliver exceptional dining experiences with fresh, high-quality ingredients and heartfelt service.</p>
+            </div>
+            <div class="vision">
+                <i class="fas fa-eye fa-2x"></i>
+                <h3>Our Vision</h3>
+                <p>To be the leading culinary destination, inspiring joy and connection through food.</p>
+            </div>
+        </div>
+    
+        <!-- Counter Section -->
+        <div class="counter-section">
+            <div class="counter-item">
+                <i class="fas fa-store fa-2x"></i>
+                <h3 class="counter" data-target="25">0</h3>
+                <p>Branches</p>
+            </div>
+            <div class="counter-item">
+                <i class="fas fa-smile fa-2x"></i>
+                <h3 class="counter" data-target="100000">0</h3>
+                <p>Happy Customers</p>
+            </div>
+        </div>
+    
+        <!-- Timeline Slider -->
+        <div class="timeline-section">
+            <h2>Our Journey</h2>
+            <div class="timeline-slider">
+                <div class="timeline-item" data-year="2015">
+                    <i class="fas fa-seedling"></i>
+                    <h4>2015</h4>
+                    <p>Food Haven founded with our first restaurant in Culinary City.</p>
+                </div>
+                <div class="timeline-item" data-year="2017">
+                    <i class="fas fa-store"></i>
+                    <h4>2017</h4>
+                    <p>Expanded to 5 branches across the region.</p>
+                </div>
+                <div class="timeline-item" data-year="2019">
+                    <i class="fas fa-trophy"></i>
+                    <h4>2019</h4>
+                    <p>Won "Best Dining Experience" award.</p>
+                </div>
+                <div class="timeline-item" data-year="2021">
+                    <i class="fas fa-globe"></i>
+                    <h4>2021</h4>
+                    <p>Launched online ordering platform.</p>
+                </div>
+                <div class="timeline-item" data-year="2023">
+                    <i class="fas fa-users"></i>
+                    <h4>2023</h4>
+                    <p>Reached 50,000 happy customers.</p>
+                </div>
+                <div class="timeline-item" data-year="2025">
+                    <i class="fas fa-star"></i>
+                    <h4>2025</h4>
+                    <p>Opened 25th branch and introduced new menu.</p>
+                </div>
+            </div>
+            <div class="timeline-controls">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-column">
+                <h3>Food Haven</h3>
+                <p>Experience the joy of fine dining with our curated menu and exceptional service.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Food St, ABC City</li>
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@Food.com</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe for the latest updates and offers.</p>
+                <div class="input-group">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Food. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+  
+
+    
+
+    
+    <script>
+window.onload = function () {
+    // Counter Animation
+    $('.counter').each(function () {
+        const $this = $(this);
+        const countTo = $this.attr('data-target');
+        $({ countNum: $this.text() }).animate(
+            {
+                countNum: countTo
+            },
+            {
+                duration: 2000,
+                easing: 'swing',
+                step: function () {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                    $this.text(this.countNum);
+                }
+            }
+        );
+    });
+
+    // Timeline Slider
+    const $slider = $('.timeline-slider');
+    const $prev = $('.timeline-controls .prev');
+    const $next = $('.timeline-controls .next');
+
+    $next.click(function () {
+        $slider.scrollLeft($slider.scrollLeft() + 270);
+    });
+
+    $prev.click(function () {
+        $slider.scrollLeft($slider.scrollLeft() - 270);
+    });
+};
+
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+/* About Section */
+#about {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* About Intro */
+.about-intro {
+    margin-bottom: 60px;
+    padding-top: 50px;
+
+}
+
+.about-slogan {
+    text-align: left;
+}
+
+.about-slogan h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 20px;
+    
+}
+
+.about-slogan .primary-color {
+    color: var(--primary-color);
+}
+
+.about-slogan p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.about-intro img {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-intro img:hover {
+    transform: scale(1.02);
+}
+
+/* Mission and Vision */
+.mission-vision {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.mission, .vision {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-10px);
+}
+
+.mission i, .vision i {
+    color: var(--primary-color);
+
+    margin-bottom: 15px;
+}
+
+.mission h3, .vision h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.mission p, .vision p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Counter Section */
+.counter-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.counter-item {
+    text-align: center;
+}
+
+.counter-item i {
+    color: var(--primary-color);
+
+    margin-bottom: 15px;
+}
+
+.counter-item h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.counter-item p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Timeline Section */
+.timeline-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.timeline-section h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.timeline-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: none; /* Firefox */
+}
+
+.timeline-slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.timeline-item {
+    flex: 0 0 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-10px);
+}
+
+.timeline-item i {
+    color: var(--primary-color);
+
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.timeline-item h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.timeline-controls {
+    margin-top: 20px;
+}
+
+.timeline-controls button {
+    background-color: var(--primary-color);
+
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.timeline-controls button:hover {
+    background-color: var(--primary-color);
+
+}
+
+/* Newsletter (Footer)
+.footer .input-group {
+    display: flex;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.footer .input-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+.footer .input-group button {
+    background-color: var(--primary-color);
+
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer .input-group button:hover {
+    background-color: var(--primary-color);
+
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-slogan h3 {
+        font-size: 2rem;
+    }
+
+    .mission-vision {
+        flex-direction: column;
+    }
+
+    .counter-section {
+        gap: 30px;
+    }
+
+    .counter-item h3 {
+        font-size: 2rem;
+    }
+
+    .timeline-item {
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-slogan h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-slogan span {
+        font-size: 1.8rem;
+    }
+    .about-slogan p {
+        font-size: 1rem;
+    }
+
+    .about-intro img {
+        margin-top: 20px;
+    }
+
+    .mission, .vision {
+        padding: 20px;
+    }
+
+    .counter-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .timeline-section h2 {
+        font-size: 2rem;
+    }
+
+    .timeline-item {
+        flex: 0 0 180px;
+    }
+}

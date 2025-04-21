@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Haven - Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/menu.css">
+    <link rel="stylesheet" href="assets/cart.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="menu-wrap">
+            <div class="logo">Food</div>
+            <div class="menu">
+                <a href="index.html"><div class="nav-menu-item ">Home</div></a>
+                <a href="about.html"><div class="nav-menu-item ">About</div></a>
+                <a href="menu.html"><div class="nav-menu-item active">Menu</div></a>
+                <a href="reviews.html"><div class="nav-menu-item">Reviews</div></a>
+                <a href="contact.html"><div class="nav-menu-item">Contact</div></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="menu-search" placeholder="Search menus...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mb-nav">
+        <div class="mb-move-item"></div>
+        <div class="mb-nav-item active">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="about.html"><i class="fas fa-info-circle"></i></a>
+        </div>
+        <div class="mb-nav-item active">
+            <a href="menu.html"><i class="fas fa-utensils"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="reviews.html"><i class="fas fa-star"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="contact.html"><i class="fas fa-phone"></i></a>
+        </div>
+    </div>
+
+    <!-- Cart Popup -->
+    <div class="cart-popup">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <i class="fas fa-times close-cart"></i>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total:</h3>
+            <span>$0.00</span>
+        </div>
+    </div>
+    <!-- Menu Section -->
+    <section id="menu" class="container">
+        <div class="food-menu bottom-up start">
+            <h2>Our Menu</h2>
+            <p>Explore our delicious offerings crafted with passion.</p>
+            <div class="food-category">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="salad">Salads</button>
+                <button data-filter="lorem">Main Course</button>
+                <button data-filter="ipsum">Desserts</button>
+                <button data-filter="dolor">Drinks</button>
+            </div>
+            <div class="food-item-wrap all"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-column">
+                <h3>Foodie Haven</h3>
+                <p>Experience the joy of fine dining with our curated menu and exceptional service.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Food St, ABC City</li>
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@food.com</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe for the latest updates and offers.</p>
+                <div class="input-group">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Food. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Load menu data
+            $.getJSON('menus.json', function(data) {
+                const menuContainer = $('.food-item-wrap');
+                menuContainer.empty();
+
+                data.menus.forEach(menu => {
+                    const menuItem = `
+                        <div class="food-item ${menu.category}-type" data-name="${menu.name}" data-price="${menu.price}" data-image="${menu.image}">
+                            <div class="item-wrap">
+                                <div class="item-img">
+                                    <div class="img-holder" style="background-image: url(${menu.image});"></div>
+                                </div>
+                                <div class="item-info">
+                                    <div>
+                                        <h3>${menu.name}</h3>
+                                        <span>$${menu.price}</span>
+                                    </div>
+                                    <div class="item-actions">
+                                        <div class="add-to-cart">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </div>
+                                        <div class="like-btn" data-liked="false">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    menuContainer.append(menuItem);
+                });
+
+                // Like button functionality
+                $('.like-btn').click(function() {
+                    const isLiked = $(this).data('liked');
+                    $(this).data('liked', !isLiked);
+                    $(this).find('i').toggleClass('far fa-heart fas fa-heart');
+                    $(this).find('i').css('color', isLiked ? '#333' : '#e74c3c');
+                });
+
+                // Category filter
+                $('.food-category button').click(function() {
+                    $('.food-category button').removeClass('active');
+                    $(this).addClass('active');
+                    const filter = $(this).data('filter');
+                    if (filter === 'all') {
+                        $('.food-item').show();
+                    } else {
+                        $('.food-item').hide();
+                        $(`.food-item.${filter}-type`).show();
+                    }
+                });
+
+                // URL parameter filtering
+                const urlParams = new URLSearchParams(window.location.search);
+                const filter = urlParams.get('filter');
+                const search = urlParams.get('search');
+                if (filter) {
+                    $(`.food-category button[data-filter="${filter}"]`).click();
+                }
+                if (search) {
+                    $('.food-item').hide();
+                    data.menus.forEach(menu => {
+                        if (menu.name.toLowerCase().includes(search.toLowerCase()) || 
+                            menu.category.toLowerCase().includes(search.toLowerCase())) {
+                            $(`.food-item[data-name="${menu.name}"]`).show();
+                        }
+                    });
+                }
+
+                // Search functionality
+                $('#menu-search').on('input', function() {
+                    const query = $(this).val().toLowerCase();
+                    $('.food-item').hide();
+                    data.menus.forEach(menu => {
+                        if (menu.name.toLowerCase().includes(query) || 
+                            menu.category.toLowerCase().includes(query)) {
+                            $(`.food-item[data-name="${menu.name}"]`).show();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
